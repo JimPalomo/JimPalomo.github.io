@@ -2572,7 +2572,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2629,7 +2629,8 @@ input, select, textarea {
 					transition: opacity 0.5s ease;
 					content: '';
 					display: block;
-					position: absolute;
+					/* Used for X in the middle of each tile */
+					/* position: absolute; */
 					top: 0;
 					left: 0;
 					width: 100%;
