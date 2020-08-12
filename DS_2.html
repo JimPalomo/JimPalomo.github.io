@@ -70,47 +70,53 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Symbol table</h1>
+							<h1>Dynamic Matrix Class</h1>
 							<span class="image main"><img src="images/DS_2.1.png" alt="" /></span>
 							<span class="image main"><img src="images/DS_2.2.png" alt="" /></span>
                             <p><h3>Description:</h3>
-                                A symbol table is a stack of scopes. The purpose of this program is to replicate the idea of how a compiler keeps track of symbols within a program (variables, types, functions, etc); thus, giving a better understand of how scopes work in programming. The use of the Catch Framework was used in this program to run test cases against the program.
-
+                                This purpose of this project is to create a matrix class that can grow the rows or columns dynamically. The program uses a struct array that contains a row pointer and the number of rows. The row pointer then points to an array of columns where each node in the column array contains a pointer to another array of data for the specific row/column and the number of columns. Abstraction can be seen in the diagram in the Project URL.
                                 <br><br>For instance, say we have two scopes currently available: global and main. Global encapsulates the main scope but does not have access to any of the variables within main. For example, if the main scope contains the variable userVar of type int then userVar can not be access by the global scope.
 								<br><br>Commands within symtable.h class:<br>
 								<ul>
 									<li>
-                                        size: returns the number of symbols in the symbol table. [O(1)]
+                                        numcols: returns the number of columns in the current row r.                                    </li>
+									<li>
+                                        growcols: the function grows the number of columns in the row r up to C columns.
+									<li>
+                                        grow: the function grow creates a new matrix of size R & C. The matrix is initialized to default value
+                                        by the copy constructor used to create the matrix.                                        								
                                     </li>
 									<li>
-                                        numscopes: returns the number of open scopes. [O(1)]									</li>
-									<li>
-                                        enterScope: enters new scope and opens the scope in the symbol table (visualized as "pushing" a
-                                        new scope to the stack). [O(1)]									</li>
-									<li>
-                                        exitScope: exit the current open scope which discards all symbols in the scope (visualized as
-                                        "popping" from the symbol table that returns to the previously opened scope). [O(1)]
+                                        size: returns the number of elements in the matrix by traversing through the whole
+                                        matrix and counting each element (with the use of a counter).                                        
                                     </li>
                                     <li>
-                                        curScope: returns a copy of the current open scope. [O(N)]
+                                        at: returns the exact location within the matrix; returns (r,c) element given r = rows and c = columns.
+                                        Used to access or change element.                                        
                                     </li>
                                     <li>
-                                        insert: inserts a (key, symbol) pair within the current open scope. If the key exists then the symbol
-                                        is replaced. [O(lgN)]
+                                        operator (): returns the exact location within the matrix; returns (r,c) element given r = rows and c =
+                                        columns. Used to access or change element                                        
                                     </li>
                                     <li>
-                                        lookup: searches symbol table for (key, symbol) pair that the user requested by searching through
-                                        the current scope outward to the global scope.                                        
+                                        operator * (scalar multiplication): traverses through the matrix and updates each element by
+                                        multiplying it by a scalar value. Returns the updated matrix. Must be in form M2 = M1 * 2.                                                                                
                                     </li>
                                     <li>
-                                        dump: output contents of symbol table from current to global.
+                                        operator * (matrix multiplication): Must be called in form M3 = M1 * M2. Matrix multiplication
+                                        produces a new matrix given the size of the rows from the original (this) matrix and the columns of
+                                        the other matrix.
+                                    </li>
+                                    <li>
+                                        _output: couts the matrix by traversing the matrix and outputting each element.
+                                        [More detailed description of commands in code documentation within the file].                                        
                                     </li>
 								</ul>
-								Data Structure: Map, Deque
-                                <br>Leveraged Knowledge: use of map and deque data structures, the idea of scopes within a program by the use of a stack by the use of the compiler, Catch Framework.
+								Data Structure: Arrays w/ pointers and structs.
+                                <br>Leveraged Knowledge: use of structs to create an array of pointers, general-purpose class in C++, copy constructor [more on website].
                                 <br><br> 
                                 <h3><a href="images/DS_2.3.pdf" target="_blank"> Sample Outputs </a></h3>
-                                <p><h3><a href="https://github.com/JimPalomo/class-projects/tree/master/CS-251/1" target="_blank">Download Code Here</a></h3></p>
+                                <p><h3><a href="https://github.com/JimPalomo/class-projects/tree/master/CS-251/2" target="_blank">Download Code Here</a></h3></p>
                                 <p><h6>Diagrams by Professor Joseph Hummel</h6></p>
 							<p> </p>
 						</div>
