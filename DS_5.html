@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html> 
+    <head> 
+        <meta charset = "utf-8" /> 
+          
+        <title> 
+            Jim Palomo 
+        </title> 
+          
+        <!-- Icon -->
+        <link rel = "icon" href =  
+		"https://i.imgur.com/K2mQ7Lq.png"
+		type = "image/x-icon"> 
+          
+    </head> 
+      
+    <body> 
+        <!-- <h1 style = "color:green;">   -->
+    </body> 
+</html>    
+
+<html>
+	<head>
+		<title>Threaded AVL Tree</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.png" alt="" /></span><span class="title">Jim Palomo</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="resume.html">Resume</a></li>
+							<!-- <li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li> -->
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Threaded AVL Tree</h1>
+							<span class="image main"><img src="images/DS_5.1.png" alt="" /></span>
+                            <p><h3>Description:</h3>
+								Threaded AVL Search Tree (single thread; right): similar to the threaded BST however rotations of an AVL tree are implemented. Adding threading allows to traverse the nodes in order by using the threads for every node; thus, traversing without recursion or the use of a stack. Therefore, limiting the amount of space required to keep track of nodes. Uses Catch Framework for creation of test cases.								<br><br>Commands within bstt.h class:<br>
+								<ul>
+									<li>
+                                        copy constructor / destructor present. [O(N)]
+                                    </li>
+									<li>
+                                        operator=: clears "this" tree and then makes a copy of the "other" tree. [O(N)]
+                                    <li>
+                                        clear: clears the tree's nodes and all its contents that were from the struct (tree is now empty). [O(N)]						
+                                    </li>
+									<li>
+                                        size: returns the number of nodes in the tree. [O(1)]
+									</li>
+									<li>
+										height: returns the height of the tree. [O(1)]
+									</li>
+                                    <li>
+                                        search: searches for the key in the tree and returns boolean value accordingly. [O(lgN)]
+                                    </li>
+                                    <li>
+										range_search: searches the tree for all keys that are within the specified range (lower <= upper) and are returned in a vector. [O(lgN + M); M is the # of keys in range]                                    </li>
+                                    <li>
+                                        insert: inserts user's node as (key, value) pair. [O(lgN)]
+                                    </li>
+                                    <li>
+                                        operator[]: returns the value that the user requests and if not found then return default value. [O(lgN)]
+                                    </li>
+                                    <li>
+                                        operator(): finds the key and returns the key to the right. If threaded then follow thread to next key
+                                        inorder. Not found will result in default value.                                        
+									</li>
+									<li>
+										operator%: returns the height stored in the node that contains a key; no key results in -1.
+									</li>
+                                    <li>
+                                        begin: obtains the first key to initiate inorder traversal [O(lgN)]
+                                    </li>
+                                    <li>
+                                        next: follows the thread and returns key that is next inorder by pass by reference.
+                                    </li>
+                                    <li>
+                                        dump: output tree's contents.
+                                    </li>
+								</ul>
+								Data Structure: AVL Tree
+								<br>Leveraged Knowledge: 
+								<ul>
+									<li>
+										Tree Rotations Cases: Right, Left then Right, Right then Left, Left
+									</li>
+									<li>
+										Helper functions under private
+									</li>
+									<li>
+										Threading saves space during inorder traversal but uses time to apply threads during insertion/deletion.
+									</li>
+								</ul>
+                                <p><h3><a href="https://github.com/JimPalomo/class-projects/tree/master/CS-251/5" target="_blank">Download Code Here</a></h3></p>
+							<p> </p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form action="https://formspree.io/jimppalomo@gmail.com" method="POST" />
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://mailto:jimppalomo@gmail.com" target="_blank" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://github.com/jimpalomo" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>							
+									<li><a href="https://www.linkedin.com/in/jim-palomo" target="_blank" class="icon brands style2 fa-linkedin"><span class="label">Twitter</span></a></li>
+									<!-- <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+									<!-- <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li> -->
+									<!-- <li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li> -->									
+									<!-- <li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li> -->
+									<!-- <li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li> -->
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Jim Palomo. All Rights Reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
