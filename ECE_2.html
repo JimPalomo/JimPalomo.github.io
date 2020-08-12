@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html> 
+    <head> 
+        <meta charset = "utf-8" /> 
+          
+        <title> 
+            Jim Palomo 
+        </title> 
+          
+        <!-- Icon -->
+        <link rel = "icon" href =  
+		"https://i.imgur.com/K2mQ7Lq.png"
+		type = "image/x-icon"> 
+          
+    </head> 
+      
+    <body> 
+        <!-- <h1 style = "color:green;">   -->
+    </body> 
+</html>    
+
+<html>
+	<head>
+		<title>Stopwatch</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.png" alt="" /></span><span class="title">Jim Palomo</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="resume.html">Resume</a></li>
+							<!-- <li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li> -->
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>stopwatch</h1>
+							<span class="image main"><img src="images/ECE_2.png" alt="" /></span>
+							<p><h3>Description:</h3>
+                                The objective of this project is to create a stopwatch based on the previous project (Wall Clock). The assembly and seg7 files were provided. Therefore, the programming was done primarily in C where running system states were implemented (Reset, Run, Pause).
+                                
+                                
+                                <br><br>Conditions:
+                                <ul>
+                                    <li>
+                                        In the second slots (2,1), the max amount of seconds is 00:59 before a rollover occurs.
+                                    </li>
+                                    <li>
+                                        In the minute slots (4,3), the max amount of seconds is 59:00 before a rollover occurs.
+                                    </li>
+                                    <li>
+                                        At 59:59, the clock resets to 00:00.
+                                    </li>
+                                    <li>
+                                        Push button SW1 is implemented as a Reset button that resets the time to 00:00. This can only work if the state of the system is paused.
+                                    </li>
+                                    <li>
+                                        Push Button SW2 is implemented as a Start/Pause/Resume button.
+                                    </li>
+                                </ul>
+                                Materials used:
+                                <ul>
+                                    <li>
+                                        Tiva C TM4C123G Micro-controller
+                                    </li>
+                                    <li>
+                                        Grove Base BoosterPack (BOOSTXL-GROVEBP)
+                                    </li>
+                                    <li>
+                                        Grove 4-Digit 7-Segment Display [Connected to Port J10]                                    
+                                    </li>
+                                    <li>
+                                        Git (Partner Collaboration)
+                                    </li>
+                                    <li>
+                                        Code Composer Studio 10.0 (IDE)
+                                    </li>
+                                </ul>
+
+                                <p><h3><a href="https://github.com/JimPalomo/class-projects/tree/master/ECE-266/Lab3" target="_blank">Download Code Here</a></h3></p>
+							<p> </p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form action="https://formspree.io/jimppalomo@gmail.com" method="POST" />
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://mailto:jimppalomo@gmail.com" target="_blank" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://github.com/jimpalomo" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>							
+									<li><a href="https://www.linkedin.com/in/jim-palomo" target="_blank" class="icon brands style2 fa-linkedin"><span class="label">Twitter</span></a></li>
+									<!-- <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+									<!-- <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li> -->
+									<!-- <li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li> -->									
+									<!-- <li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li> -->
+									<!-- <li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li> -->
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Jim Palomo. All Rights Reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
