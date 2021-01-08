@@ -26,7 +26,7 @@
 
 <html>
 	<head>
-		<title>8-Bit CPU Design</title>
+		<title>Cache Simulator</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -70,25 +70,34 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>8-Bit CPU Design</h1>
-							<span class="image main"><img src="images/ECE_12.1.png" alt="" /></span>
+							<h1>Cache Simulator</h1>
+							<span class="image main"><img src="images/ECE_13.1.png" alt="" /></span>
+							<span class="image main"><img src="images/ECE_13.2.png" alt="" /></span>
+							<span class="image main"><img src="images/ECE_13.3.png" alt="" /></span>
+							<span class="image main"><img src="images/ECE_13.4.png" alt="" /></span>
 							<p><h3>Description:</h3>
-								The project consisted of a custom ASIC-style CPU. Working under a team, I was in charge of the software development aspect while assisting in the hardware implementation of the 8-bit CPU. The CPU was developed in CircuitVerse (https://circuitverse.org/users/49995/projects/project-3-isa-design).
+								Cache Simulator done in Python. Four different cache configurations were simulated to output detailed step-by-step information and hit or missed targets.
 
-								Goals accomplished (problem prompt):
+								Cache Configurations:
                                 <ul>
                                     <li>
-										Generate array A1 - A100 following the logic of (A + B) xor C
+										(N=1, S=1, b=64) a simplest cache, with only 1 block, size of 64 B
 									</li>
                                     <li>
-										Generate width W1 - W100 [e.g. 01101100 = 5]
+										(N=1, S=4, b=16) a Direct Map cache with 4 sets, block size of 16 B
+									</li>
+									<li>
+										(N=4, S=1, b=16) a 4-way Fully Associative cache, cache, block size of 8 B [LRU]
+									</li>
+									<li>
+										(N=2, S=4, b=8) a 2-way 4-set, Set Associative cache, block size of 8 B [LRU]
 									</li>
 								</ul>
 
-								Program Includes (Software made to represent Hardware Implementation):
+								Program Includes:
                                 <ul>
                                     <li>
-										MIPS Assembly Simulator in Python (prior project modified for custom ISA)
+										Detailed step-by step information of memory breakdown (tag, valid bit, offset), LRU (least recently used) information, and hit/miss results								
 									</li>
                                     <li>
 										Contains 8 registers, 256 Bytes of data memory, and functional PC logic for execution
@@ -101,44 +110,16 @@
 									</li>
 								</ul>
 
-								Hardware Includes (on CircuitVerse):
-                                <ul>
-                                    <li>
-										Hardware embedded implementation to compute the width of an 8-bit binary string									
-									</li>
-                                    <li>
-										Register File containing 8 registers with one open (register 6 is free for future implementations)									
-									</li>
-									<li>
-										Control Unit logic to decode and translate the nine defined instructions									
-									</li>
-									<li>
-										ALU schematic to perform ALU operations									
-									</li>
-									<li>
-										64 Byte ROM for instruction memory (IM) [though we only used 16 Bytes to accomplish our goal]
-									</li>
-									<li>
-										Integration of CPU's datapath
-									</li>
-								</ul>
-
 								Leveraged Knowledge
 								<ul>
 									<li>
 										Assembly of CPU under ASIC conditions									
 									</li>
 									<li>
-										Development using logic gates, muxes (for selection signals), decoders, etc									
-									</li>
-									<li>
-										Simulation of ISA in Python that generated proper results (1:1 match of hardware implementation)
-									</li>
-									<li>
-										Use of a clock to make CPU run constantly when program starts
+										Two modes: Fast Mode (output only hit/miss results), Detailed Mode (output step-by-step cache attempt information and hit/miss results									
 									</li>
 								</ul>
-                                <p><h3><a href="https://github.com/JimPalomo/class-projects/tree/master/ECE-366/3" target="_blank">Download Code Here</a></h3></p>
+                                <p><h3><a href="https://github.com/JimPalomo/class-projects/tree/master/ECE-366/4" target="_blank">Download Code Here</a></h3></p>
 							<p> </p>
 						</div>
 					</div>
